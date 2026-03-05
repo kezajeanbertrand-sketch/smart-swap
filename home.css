@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2); /* Slight tint for readability */
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2ecc71;
+}
+
+.book-btn {
+    background-color: #007a5e;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Hero Section with Slider Animation */
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    /* This animation triggers the image change */
+    animation: slider 7s infinite ease-in-out;
+}
+
+@keyframes slider {
+    0%, 100% { background-image: url('uu.png'); }
+    50% { background-image: url('gg.png'); }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Darkens the image slightly */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color:blue;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: lowercase;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
